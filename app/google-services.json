@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "630405453638",
+    "project_id": "java-tutorial-cea37",
+    "storage_bucket": "java-tutorial-cea37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630405453638:android:8d310901d30c043dbdb747",
+        "android_client_info": {
+          "package_name": "com.example.javatutorial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4RBMNqB4ud8Caqk7Ls0k4UA6nsgyCUzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
