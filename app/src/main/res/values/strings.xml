@@ -1,5 +1,9 @@
 <resources>
+    <!-- English Language -->
     <string name="app_name">Java Tutorial</string>
+    <string name="java_tutorial">Java Tutorial</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
     <string name="intro1">
         <font size="30"><b>Java Introduction\n\n\n</b></font>
         <font size="18"><b>What is Java?\n\n</b></font>
