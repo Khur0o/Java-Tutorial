@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.javatutorial.account.LoginForm;
+
 public class Introduction extends AppCompatActivity {
     // Declare private member variables for UI elements and a counter variable
     private TextView textview, Skip;
@@ -28,16 +30,18 @@ public class Introduction extends AppCompatActivity {
         Back = findViewById(R.id.BCK);
         Next = findViewById(R.id.NXT);
         Back.setVisibility(View.INVISIBLE);
+        /**
         // Check if the instruction has been skipped before
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         boolean instructionSkipped = sharedPreferences.getBoolean("instructionSkipped", false);
         if(instructionSkipped) {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
-        }
+        }**/
         // Button Click Listeners
         Skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), LoginForm.class));/**
                 if (!instructionSkipped) {
                     // Create an Intent to navigate to the MainActivity
                     // Add a flag to clear the activity stack (remove Introduction from back stack)
@@ -50,7 +54,7 @@ public class Introduction extends AppCompatActivity {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean("instructionSkipped", true);
                     editor.apply();
-                }
+                }**/
             }
         });
         Back.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +88,9 @@ public class Introduction extends AppCompatActivity {
             case 2:
                 textview.setText(R.string.intro3);
                 Back.setVisibility(View.VISIBLE);
+                break;
+            case 3:
+                startActivity(new Intent(getApplicationContext(), LoginForm.class));
                 break;
             default:
                 // Set the text of the TextView to the default string resource
