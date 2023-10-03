@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".account.SignIn">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/bg"
-        android:scaleType="matrix"
-        android:scaleY="-1"/>
+        android:scaleType="centerCrop"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -38,8 +34,9 @@
                         android:layout_height="60dp"
                         android:hint="@string/email"
                         app:boxStrokeErrorColor="@color/error"
-
                         android:textColorHint="#404040"
+                        app:boxStrokeColor="#404040"
+
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         app:startIconDrawable="@drawable/ic_baseline_email_24"
                         app:startIconTint="#404040"
@@ -47,16 +44,14 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
-                        <!--app:boxStrokeColor="@color/main"-->
-                        <!--app:startIconDrawable="@drawable/ic_baseline_email_24"-->
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/email"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:inputType="textEmailAddress"
                             android:textColor="#404040"
+                            android:textColorHint="#404040"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -67,6 +62,7 @@
                         android:hint="@string/password"
                         android:textColorHint="#404040"
                         android:longClickable="false"
+
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         app:startIconDrawable="@drawable/ic_baseline_lock_24"
                         app:startIconTint="#404040"
@@ -75,7 +71,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:boxStrokeColor="#404040">
                         <!--app:boxStrokeColor="@color/main"-->
                         <!--app:startIconDrawable="@drawable/ic_baseline_lock_24"-->
                         <com.google.android.material.textfield.TextInputEditText
@@ -84,6 +81,7 @@
                             android:layout_height="match_parent"
                             android:textColor="#404040"
                             android:inputType="textPassword"
+                            android:textColorHint="#404040"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -139,17 +137,16 @@
 
                         <TextView
                             android:id="@+id/forget"
-                            android:layout_marginLeft="30dp"
+                            android:layout_marginStart="30dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Forget your password?"
                             android:textColor="#404040"
-                            android:textSize="15dp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
-    </RelativeLayout>
 <ProgressBar
 android:id="@+id/progressBar"
 style="?android:attr/progressBarStyleLarge"
@@ -162,4 +159,4 @@ app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
