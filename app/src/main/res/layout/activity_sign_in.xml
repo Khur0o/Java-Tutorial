@@ -5,38 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".account.SignIn">
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <ImageView
+            <FrameLayout
+                android:id="@+id/up"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
-                android:gravity="center">
-                <FrameLayout
-                    android:layout_gravity="center"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:background="@drawable/java"
-                    />
-                <TextView
+                android:layout_height="wrap_content"
+                android:background="@drawable/semicircle"
+                android:padding="40dp"
+                android:backgroundTint="#003366">
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/java_tutorial"
-                    android:gravity="center"
-                    android:textSize="40sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:textColor="#858585"/>
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/java"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/java_tutorial"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
 
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+                android:gravity="center"
 
+                >
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
@@ -105,26 +114,18 @@
                     android:layout_marginTop="20dp">
 
                     <Button
-                        android:id="@+id/login"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/usersigin"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Sign In"
-                        android:paddingRight="40dp"
-                        android:paddingLeft="40dp" />
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/corners"
+                        android:backgroundTint="#003366"
+                        android:textColor="@color/white"/>
                     <!--android:background="@drawable/corners"-->
 
-                    <Button
-                        android:id="@+id/guest"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Guest"
-                        android:textColor="#A9A9A9"
-                        android:paddingRight="40dp"
-                        android:paddingLeft="40dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/corners"
-                        android:backgroundTint="#0f3d3d"
-                        />
+
 
                     <!--android:background="@drawable/corners"
                     android:drawableRight="@drawable/google"-->
@@ -164,7 +165,7 @@
                         android:textSize="15dp" />
                 </LinearLayout>
             </LinearLayout>
-        </RelativeLayout>
+        </LinearLayout>
 <ProgressBar
 android:id="@+id/progressBar"
 style="?android:attr/progressBarStyleLarge"
