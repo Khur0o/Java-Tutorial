@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "630405453638",
-    "project_id": "java-tutorial-cea37",
-    "storage_bucket": "java-tutorial-cea37.appspot.com"
+    "project_number": "295836161486",
+    "project_id": "java-tutorial-328a2",
+    "storage_bucket": "java-tutorial-328a2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:630405453638:android:8d310901d30c043dbdb747",
+        "mobilesdk_app_id": "1:295836161486:android:bfaa7adc826b61790b879f",
         "android_client_info": {
           "package_name": "com.example.javatutorial"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB4RBMNqB4ud8Caqk7Ls0k4UA6nsgyCUzw"
+          "current_key": "AIzaSyD9qUWctBqxHehuyGng6l6ngoaRct2D4Kk"
         }
       ],
       "services": {

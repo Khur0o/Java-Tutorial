@@ -38,42 +38,33 @@ public class Introduction extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }**/
         // Button Click Listeners
-        Skip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), LoginForm.class));/**
-                if (!instructionSkipped) {
-                    // Create an Intent to navigate to the MainActivity
-                    // Add a flag to clear the activity stack (remove Introduction from back stack)
-                    // Start the MainActivity
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
+        Skip.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), LoginForm.class));/**
+            if (!instructionSkipped) {
+                // Create an Intent to navigate to the MainActivity
+                // Add a flag to clear the activity stack (remove Introduction from back stack)
+                // Start the MainActivity
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
 
-                    // Set the flag to indicate that the instruction has been skipped
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putBoolean("instructionSkipped", true);
-                    editor.apply();
-                }**/
-            }
+                // Set the flag to indicate that the instruction has been skipped
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("instructionSkipped", true);
+                editor.apply();
+            }**/
         });
-        Back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Decrement the 'a' counter
-                // Call the Switch method to handle the counter value
-                --a;
-                Switch();
-            }
+        Back.setOnClickListener(view -> {
+            // Decrement the 'a' counter
+            // Call the Switch method to handle the counter value
+            --a;
+            Switch();
         });
-        Next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Increment the 'a' counter
-                // Call the Switch method to handle the counter value
-                ++a;
-                Switch();
-            }
+        Next.setOnClickListener(view -> {
+            // Increment the 'a' counter
+            // Call the Switch method to handle the counter value
+            ++a;
+            Switch();
         });
     }
     // Custom method to handle UI changes based on the 'a' counter

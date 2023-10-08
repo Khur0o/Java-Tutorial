@@ -12,16 +12,23 @@ import com.example.javatutorial.MainActivity;
 import com.example.javatutorial.R;
 
 public class LoginForm extends AppCompatActivity {
-    private FrameLayout Signin;
+    private FrameLayout Signin, Signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_form);
         Signin = findViewById(R.id.sign_in);
+        Signup = findViewById(R.id.sign_up);
         Signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), SignIn.class));
+            }
+        });
+        Signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Register.class));
             }
         });
     }

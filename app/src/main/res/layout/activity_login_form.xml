@@ -32,12 +32,17 @@
                         android:background="@drawable/corners"
                         android:padding="10dp"
                         android:backgroundTint="@color/white"
-                        android:elevation="8dp"
+                        android:elevation="10dp"
                         >
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/user"
+                                />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -48,6 +53,7 @@
                         </LinearLayout>
                     </FrameLayout>
                     <FrameLayout
+                        android:id="@+id/sign_up"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -55,14 +61,18 @@
                         android:background="@drawable/corners"
                         android:padding="10dp"
                         android:backgroundTint="@color/white"
-                        android:layout_marginTop="10dp"
-                        android:elevation="8dp"
+                        android:layout_marginTop="20dp"
+                        android:elevation="10dp"
                         >
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
-
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/useradd"
+                                />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -72,26 +82,43 @@
                                 android:gravity="center"/>
                         </LinearLayout>
                     </FrameLayout>
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="--or--"
-                        android:textColor="#00a3cc"
-                        android:textSize="18sp"
-                        android:padding="10dp"
+                        android:orientation="horizontal"
                         android:gravity="center"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="20dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="2dp"
+                            android:background="@drawable/corners"
+                            android:backgroundTint="#00a3cc"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="or"
+                            android:textColor="#00a3cc"
+                            android:textSize="18sp"
+                            android:padding="10dp"
+                            />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="2dp"
+                            android:background="@drawable/corners"
+                            android:backgroundTint="#00a3cc"/>
+                    </LinearLayout>
+
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="40dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/corners"
                         android:padding="10dp"
                         android:backgroundTint="@color/white"
-                        android:elevation="8dp">
+                        android:elevation="10dp">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"

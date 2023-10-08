@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startActivity(new Intent(getApplicationContext(), Introduction.class));
-        /**
+        //startActivity(new Intent(getApplicationContext(), Introduction.class));
+
         // Retrieve the identifier of the last visited activity
         SharedPreferences preferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         String lastVisitedActivity = preferences.getString("lastVisitedActivity", null);
@@ -30,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
             // Handle the case when there's no last visited activity saved
             // You can start the main activity or another default activity in this case
             startActivity(new Intent(getApplicationContext(), Introduction.class));
-        }**/
+        }
     }
 }
