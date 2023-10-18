@@ -136,6 +136,13 @@
                                 android:textSize="16sp"
                                 android:textColor="#00a3cc"
                                 android:gravity="center"/>
+                            <com.google.android.gms.common.SignInButton
+                                android:id="@+id/googleSignInButton"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
+                                android:visibility="invisible"
+                            />
                         </LinearLayout>
                     </FrameLayout>
                 </LinearLayout>
